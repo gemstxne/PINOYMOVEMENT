@@ -12,7 +12,6 @@ body { background: #cecaca; color: #2c3e50; transition: background 0.5s ease; }
 body {
     font-family: 'Inter', 'Poppins', sans-serif;
     background-color: #cecaca;
-    padding-top: 80px;
     color: #000000;
     line-height: 1.6;
 }
@@ -37,7 +36,6 @@ h1, p{
     width: 100%;
     z-index: 50;
     padding: 1.5rem 1rem;
-    background-color: #8B0000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +115,7 @@ h1, p{
 .hero {
     background-color: var(--primary-color); 
     color: white;
-    padding: 2px;
+    padding: 110px 0 60px 0; /* Updated Padding: Top 100px to clear navbar */
     text-align: center;
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -129,7 +127,7 @@ h1, p{
     margin-bottom: 5px;
     text-align: left;
     margin-left: 5%;
-    margin-top: 30px;
+    margin-top: 0px;
     font-weight: 800;
 } 
 
@@ -139,7 +137,6 @@ h1, p{
     font-weight: 400;
     text-align: left;
     margin-left: 5%;
-    margin-bottom: 42px;
 }
 
 /* FLOAT ANIMATIONS */
