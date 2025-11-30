@@ -73,6 +73,10 @@ ul { list-style: none; }
     margin: 0 auto;
 }
 
+.nav-links a:hover {
+    color: #c4cbaf;
+}
+
 .brand {
     display: flex;
     align-items: center;

@@ -1,129 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4; /* Light gray background */
+    font-family: 'Inter', 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cecaca;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Navigation Bar */
 .container {
-    max-width: 900px;
-    margin: auto;
-    background-color: white;
-    padding: 30px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-hr {
+/* Primary Color: Dark Red/Maroon based on your header */
+:root {
+    --primary-color: #8B0000; /* Deep Red/Maroon */
+    --accent-color: #9c261f;  /* Orange for highlights */
+    --gray: #8a8a8a;
+    --obsidian-black: #0b0b0c;
+    --text-color: #182634;
+
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Header/Hero Section Styling (Using your existing dark red) */
+header {
+background-color: var( --primary-color);
+color: white;
+text-align: center;
+height: 100px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 1.5rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #c4cbaf;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
     border: none;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
 }
 
-/* --- Headings Styling --- */
-.header-title {
+.btn-white {
+    background-color: white;
+    color: black;
+}
+
+.btn-white:hover { background-color: #e5e7eb; }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-logo {
+    width: 3rem;
+    height: 3rem;
+    background: #cecaca;
+    color: #8B0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+    .nav-links { display: flex; }
+    .navbar { padding: 1.5rem 3rem; }
+}
+
+/* Info Content */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.info-card {
+    background-color: #e3ebf8;
+    border-radius: 15px;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 5;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #F2F1ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.info-text p {
+    font-size: 12px;
+    color: #000000;
+}
+
+.info-card.inte {
+    background-color: #ff4141; /* integrity color */
+}
+
+.info-card.trans {
+    background-color: #5c1c1c; /* transparency color */
+}
+
+.info-card.acc {
+    background-color: #ff4141; /* accountability color */
+}
+
+/* Hero Section */
+p {
+    color: #090303;
+}
+
+.hero {
     text-align: center;
-    color: #333;
-    padding-bottom: 5px;
-    margin-bottom: 0;
-    font-size: 20px;
+    padding: 60px 20px;
+    background: var( --primary-color);
+    animation: float 5s infinite alternate ease-in-out;
 }
 
-h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-h2, h3, h4, h5, h6 {
-    color: #333; 
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+.hero-img {
+    width: 40%;
+    border-radius: 0px;
     margin-top: 20px;
 }
 
-/* Adjusting heading sizes for the example */
-.heading-example h2 { font-size: 24px; }
-.heading-example h3 { font-size: 20px; }
-.heading-example h4 { font-size: 16px; }
-.heading-example h5 { font-size: 14px; }
-.heading-example h6 { font-size: 12px; }
-
-/* General Title for Sections like Table, Form, Gallery */
-.section-title {
-    color: #1a73e8; /* Blue color */
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 10px;
+/* General Sections */
+.section {
+    padding: 50px 30px;
 }
 
-/* --- Registration Table Styling --- */
-.registration-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    text-align: left;
-    /* Overrides the 'border="3px"' attribute in the HTML for clean CSS styling */
-    border: none !important;
-}
-
-.registration-table th, .registration-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.registration-table th {
-    background-color: #5d9cec; /* Blue header background */
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.registration-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* --- Favorite Fruits Gallery Styling --- */
-.fruit-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.fruit-item {
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 10px;
+.section h2 {
+    color: var( --primary-color);
+    margin-bottom: 20px;
+    font-size: 2em;
     text-align: center;
-    background-color: white;
 }
 
-.fruit-item img {
-    width: 100%;
-    /* Added fixed height to match image size in the original screenshot */
-    height: 150px; 
-    object-fit: cover; /* Ensures image covers the area without stretching */
+/* Dark Section */
+.dark {
+    background: var(--obsidian-black);
+    color: var(--soft-pearl);
+    border-top: 4px solid var( --primary-color);
+    border-bottom: 4px solid var( --primary-color);
+}
+
+/* Cards Section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 85%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var( --primary-color);
+}
+
+/* Wide Image */
+.wide-img {
+    width: 80%;
+    margin: 0 auto 20px auto;
     display: block;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border-radius: 12px;
 }
 
-.fruit-item div {
-    font-weight: bold;
-}
-
-/* --- Programming Languages List Styling --- */
-.lang-list {
-    list-style-type: decimal;
-    padding-left: 20px;
-}
-
-.footer-text {
+/* Footer */
+footer {
+    background: var( --text-color);
+    color: white;
     text-align: center;
-    font-size: 12px;
-    color: #777;
-    margin-top: 10px;
+    padding: 20px;
+        color:white;
 }
+
+/* Fade Animation */
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Section styling */
+
+.section-desc {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* DARK THEME SECTION */
+
+.dark {
+    background: var(--obsidian-blac);
+    color: var(--soft-pearl);
+    border-top: 4px solid var( --primary-color);
+    border-bottom: 4px solid var( --primary-color);
+}
+
+/* CARD GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border: 2px solid var(--gray);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.4s;
+    animation: fadeInUp 1.2s ease;
+}
+
+.card img {
+    width: 85%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: var( --primary-color);
+}
+
+/* LISTS */
+
+.list {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Wide Image */
+
+.wide-img {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 12px;
+    animation: floatUp 2s ease;
+}
+
+/* PLEDGE SECTION */
+
+.pledge {
+    color: white;
+    text-align: center;
+    padding: 60px 30px;
+    border-top: 4px solid var( --primary-color);
+    background: #ffffff;
+}
+
+.pledge-text {
+    font-size: 1.3em;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.pledge-btn {
+    background: var( --primary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pledge-btn:hover {
+    background: rgb(0, 0, 0);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ANIMATIONS */
+
+.fade-in { animation: fadeIn 1.3s ease; }
+.slide-up { animation: slideUp 1.5s ease; }
+.slide-down { animation: slideDown 1.5s ease; }
+.slide-in-left { animation: slideLeft 1.5s ease; }
+.slide-in-right { animation: slideRight 1.5s ease; }
+.zoom-in { animation: zoomIn 1.2s ease; }
+.float-up { animation: floatUp 1.5s ease; }
+.hover-rise:hover { animation: hoverRise 0.6s ease forwards; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideDown { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideLeft { from { transform: translateX(-40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideRight { from { transform: translateX(40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes floatUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+
+/* Floating Hero */
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(12px); }
+}
+
+/* Card Float */
+@keyframes hoverRise {
+    to { transform: translateY(-10px) scale(1.05); }
+}
+
+/* FadeInUp for cards */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Initiatives Section */
+.initiatives-section {
+padding: 30px;
+background-color: var( --primary-color);
+color: white;
+}
+
+
+.image-gallery {
+display: flex;
+gap: 15px;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+
+.image-gallery img {
+width: 200px;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(14, 1, 1, 0.2);
+transition: transform 0.3s ease;
+}
+
+
+.image-gallery img:hover {
+transform: scale(1.05);
+}
+
+
+.initiatives-list {
+list-style: square;
+max-width: 600px;
+margin: 0 auto;
+font-size: 18px;
+}
+
+
+.initiatives-list li {
+margin-bottom: 10px;
+}
+
+
+/* Commitment Section */
+.commitment-section {
+padding: 40px;
+text-align: center;
+background-color: white;
+color: var(--text-color);
+}
+
+
+
