@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #8B0000; 
+    --accent-color: #9c261f;
+    --text-color: #2c3e50;
+}
+
 /* Basic Reset and Global Styles */
 * {
     margin: 0;
@@ -18,18 +24,6 @@ body {
     max-width: 1500px;
     margin: 20px auto;
     padding: 0 20px;
-}
-
-/* Primary Color: Dark Red/Maroon based on your header */
-:root {
-    --primary-color: #8B0000; /* Deep Red/Maroon */
-    --accent-color: #9c261f;  /* Orange for highlights */
-    --text-color: #2c3e50;    /* Dark Blue/Grey for readability */
-}
-
-h1, h2, h3 {
-    color: #8B0000;
-    font-weight: 700;
 }
 
 /* Header/Hero Section Styling (Using your existing dark red) */
