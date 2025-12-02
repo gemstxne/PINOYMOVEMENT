@@ -13,21 +13,10 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Bar */
 .container {
     max-width: 1500px;
     margin: 20px auto;
     padding: 0 20px;
-}
-
-/* Primary Color: Dark Red/Maroon based on your header */
-:root {
-    --primary-color: #8B0000; /* Deep Red/Maroon */
-    --accent-color: #9c261f;  /* Orange for highlights */
-    --gray: #8a8a8a;
-    --obsidian-black: #0b0b0c;
-    --text-color: #182634;
-
 }
 
 h1, h2, h3 {
@@ -35,12 +24,11 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* Header/Hero Section Styling (Using your existing dark red) */
 header {
-background-color: var( --primary-color);
-color: white;
-text-align: center;
-height: 100px;
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    height: 100px;
 }
 
 .navbar {
@@ -129,7 +117,6 @@ height: 100px;
     .navbar { padding: 1.5rem 3rem; }
 }
 
-/* Info Content */
 .info-grid {
     display: flex;
     flex-direction: column;
@@ -173,18 +160,17 @@ height: 100px;
 }
 
 .info-card.inte {
-    background-color: #ff4141; /* integrity color */
+    background-color: #ff4141;
 }
 
 .info-card.trans {
-    background-color: #5c1c1c; /* transparency color */
+    background-color: #5c1c1c;
 }
 
 .info-card.acc {
-    background-color: #ff4141; /* accountability color */
+    background-color: #ff4141;
 }
 
-/* Hero Section */
 p {
     color: #090303;
 }
@@ -192,7 +178,7 @@ p {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: var( --primary-color);
+    background: #8B0000;
     animation: float 5s infinite alternate ease-in-out;
 }
 
@@ -202,27 +188,24 @@ p {
     margin-top: 20px;
 }
 
-/* General Sections */
 .section {
     padding: 50px 30px;
 }
 
 .section h2 {
-    color: var( --primary-color);
+    color: #8B0000;
     margin-bottom: 20px;
     font-size: 2em;
     text-align: center;
 }
 
-/* Dark Section */
 .dark {
-    background: var(--obsidian-black);
+    background: #0b0b0c;
     color: var(--soft-pearl);
-    border-top: 4px solid var( --primary-color);
-    border-bottom: 4px solid var( --primary-color);
+    border-top: 4px solid #8B0000;
+    border-bottom: 4px solid #8B0000;
 }
 
-/* Cards Section */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -231,7 +214,6 @@ p {
 
 .card {
     background: white;
-
     border-radius: 12px;
     padding: 15px;
     text-align: center;
@@ -247,10 +229,9 @@ p {
 
 .card:hover {
     transform: translateY(-6px);
-    border-color: var( --primary-color);
+    border-color: #8B0000;
 }
 
-/* Wide Image */
 .wide-img {
     width: 80%;
     margin: 0 auto 20px auto;
@@ -258,26 +239,22 @@ p {
     border-radius: 12px;
 }
 
-/* Footer */
 footer {
-    background: var( --text-color);
+    background: #182634;
     color: white;
     text-align: center;
     padding: 20px;
-        color:white;
+    color:white;
 }
 
-/* Fade Animation */
 .fade-in {
     animation: fadeIn 1.2s ease-in-out;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(25px); }
-    to   { opacity: 1; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-/* Section styling */
 
 .section-desc {
     text-align: center;
@@ -285,16 +262,12 @@ footer {
     font-size: 1.1em;
 }
 
-/* DARK THEME SECTION */
-
 .dark {
     background: var(--obsidian-blac);
     color: var(--soft-pearl);
-    border-top: 4px solid var( --primary-color);
-    border-bottom: 4px solid var( --primary-color);
+    border-top: 4px solid #8B0000;
+    border-bottom: 4px solid #8B0000;
 }
-
-/* CARD GRID */
 
 .grid {
     display: grid;
@@ -304,7 +277,7 @@ footer {
 
 .card {
     background: white;
-    border: 2px solid var(--gray);
+    border: 2px solid #8a8a8a;
     border-radius: 12px;
     padding: 15px;
     text-align: center;
@@ -322,10 +295,8 @@ footer {
 
 .card:hover {
     transform: translateY(-8px) scale(1.03);
-    border-color: var( --primary-color);
+    border-color: #8B0000;
 }
-
-/* LISTS */
 
 .list {
     max-width: 800px;
@@ -333,8 +304,6 @@ footer {
     line-height: 1.8;
     font-size: 1.1em;
 }
-
-/* Wide Image */
 
 .wide-img {
     width: 80%;
@@ -344,13 +313,11 @@ footer {
     animation: floatUp 2s ease;
 }
 
-/* PLEDGE SECTION */
-
 .pledge {
     color: white;
     text-align: center;
     padding: 60px 30px;
-    border-top: 4px solid var( --primary-color);
+    border-top: 4px solid #8B0000;
     background: #ffffff;
 }
 
@@ -361,7 +328,7 @@ footer {
 }
 
 .pledge-btn {
-    background: var( --primary-color);
+    background: #8B0000;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -378,8 +345,6 @@ footer {
 .pulse {
     animation: pulse 2s infinite;
 }
-
-/* ANIMATIONS */
 
 .fade-in { animation: fadeIn 1.3s ease; }
 .slide-up { animation: slideUp 1.5s ease; }
@@ -399,73 +364,65 @@ footer {
 @keyframes floatUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
 
-/* Floating Hero */
 @keyframes float {
     from { transform: translateY(0); }
     to { transform: translateY(12px); }
 }
 
-/* Card Float */
 @keyframes hoverRise {
     to { transform: translateY(-10px) scale(1.05); }
 }
 
-/* FadeInUp for cards */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Initiatives Section */
 .initiatives-section {
-padding: 30px;
-background-color: var( --primary-color);
-color: white;
+    padding: 30px;
+    background-color: #8B0000;
+    color: white;
 }
 
 
 .image-gallery {
-display: flex;
-gap: 15px;
-justify-content: center;
-margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 
 .image-gallery img {
-width: 200px;
-height: auto;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(14, 1, 1, 0.2);
-transition: transform 0.3s ease;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(14, 1, 1, 0.2);
+    transition: transform 0.3s ease;
 }
 
 
 .image-gallery img:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 
 .initiatives-list {
-list-style: square;
-max-width: 600px;
-margin: 0 auto;
-font-size: 18px;
+    list-style: square;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
 }
 
 
 .initiatives-list li {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 
-/* Commitment Section */
 .commitment-section {
-padding: 40px;
-text-align: center;
-background-color: white;
-color: var(--text-color);
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    color: #182634;
 }
-
-
-
