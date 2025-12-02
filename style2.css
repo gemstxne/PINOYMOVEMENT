@@ -28,7 +28,7 @@ header {
     background-color: #8B0000;
     color: white;
     text-align: center;
-    height: 100px;
+    height: 120px;
 }
 
 .navbar {
@@ -49,7 +49,6 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 1rem;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -96,11 +95,8 @@ header {
 }
 
 .brand-logo {
-    width: 3rem;
-    height: 3rem;
-    background: #cecaca;
-    color: #8B0000;
-    border-radius: 50%;
+    width: 4rem;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;

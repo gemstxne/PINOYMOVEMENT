@@ -1,111 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – PINOY Advocacy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – PINOY Advocacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style3.css">
 </head>
+<body>
 
-<header class="hero">
-        <nav class="navbar">
-            <div class="nav-content">
-                <div class="brand">
-                    <div class="brand-logo">
-                        <img src="PINOYMOVEMENT.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                    </div>
-                    <span class="brand-name">Project PINOY</span>
-                </div>
-                
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="learn.html">Learn</a>
-                <a href="action.html">Take Action</a>
-                    <a href="aboutus.html">About</a>
-                </div>
-    
-                <button class="btn btn-white">Sign Up</button>
-            </div>
-        </nav>
-
-        <h1>Who We Are</h1>
-        <p>
-        Project PINOY is a student-led advocacy group dedicated to promoting transparency, honesty, 
-        and accountability<br> in everyday life. We believe that the fight against corruption
-        begins with awareness, education, and individual action.
-        </p>
-    </header>
-
-    <!-- ABOUT SECTION -->
-    <main class="about-container">
-
-        <div class="about-boxes-grid">
-
-            <div class="about-box hover-img-1" data-bg="mission.jfif" data-float="floating-left-1">
-                <h2>Our Mission</h2>
-                <p>To inspire Filipinos—especially the youth—to recognize corruption, reject dishonest practices, and encourage a culture of integrity.</p>
-            </div>
-
-            <div class="about-box hover-img-2" data-bg="vision.jfif" data-float="floating-left-2">
-                <h2>Our Vision</h2>
-                <p>A Philippines where every citizen, office, and institution values honesty, fairness, and justice.</p>
-            </div>
-
-            <div class="about-box hover-img-3" data-bg="glass.jpg" data-float="floating-right-1">
-                <h2>What We Do</h2>
-                <ul>
-                    <li>Create educational materials on corruption.</li>
-                    <li>Promote youth involvement in community awareness.</li>
-                    <li>Encourage ethical behavior inside and outside school.</li>
-                    <li>Provide space where students can learn and speak up.</li>
-                </ul>
-            </div>
-
-            <div class="about-box hover-img-4" data-bg="members.png" data-float="floating-right-2">
-                <h2>Our Team</h2>
-                <p>A group of students committed to making a positive change through advocacy, research, and community engagement.</p>
-            </div>
-
+  <!-- NAVBAR -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="PINOYMOVEMENT.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+          <span class="brand-name">Project PINOY</span>
         </div>
-    </main>
 
-    <!-- SCRIPT TO CHANGE FULL PAGE BG, SCALE FLOATING IMG, AND LOWER BOX OPACITY -->
-    <script>
-        const boxes = document.querySelectorAll('.about-box');
-        boxes.forEach(box => {
-            const floatClass = box.dataset.float;
-            const floatImg = document.querySelector(`.${floatClass} img`);
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn.html">Learn</a>
+          <a href="action.html">Take Action</a>
+          <a href="aboutus.html">About</a>
+        </div>
+        <a href="index.html#signup">
+    <button class="btn btn-white">Sign Up</button>
+        </a>
+      </div>
+    </nav>
 
-            box.addEventListener('mouseenter', () => {
-                document.body.style.background = `url(${box.dataset.bg}) no-repeat center center fixed`;
-                document.body.style.backgroundSize = 'cover';
+    <h1>Who We Are</h1>
+    <p>
+      Project PINOY is a student-led advocacy group dedicated to promoting transparency, honesty, 
+      and accountability in everyday life.<br> We believe that the fight against corruption
+      begins with awareness, education, and individual action.
+    </p>
+  </header>
 
-                if(floatImg){
-                    floatImg.style.transform = 'scale(1.3)';
-                }
 
-                document.querySelectorAll('.about-box').forEach(b => {
-                    b.style.opacity = '0.6'; // semi-transparent
-                });
-            });
+  <main class="about-section">
 
-            box.addEventListener('mouseleave', () => {
-                document.body.style.background = '#cecaca';
+   
+    <div class="top-box-row">
 
-                if(floatImg){
-                    floatImg.style.transform = 'scale(1)';
-                }
+    
+      <div class="about-box overlay-box">
+        <div class="box-overlay" style="background-image: url('mission.jfif');"></div>
+        <h1>Our Mission</h1>
+        <p>To inspire Filipinos—especially the youth—to recognize corruption, reject dishonest practices, and encourage a culture of integrity.</p>
+      </div>
 
-                document.querySelectorAll('.about-box').forEach(b => {
-                    b.style.opacity = '1';
-                });
-            });
-        });
-    </script>
+     
+      <div class="about-box overlay-box">
+        <div class="box-overlay" style="background-image: url('glass.jpg');"></div>
+        <h1>What We Do</h1>
+        <ul>
+          <li>Create educational materials on corruption.</li>
+          <li>Promote youth involvement in community awareness.</li>
+          <li>Encourage ethical behavior inside and outside school.</li>
+          <li>Provide space where students can learn and speak up.</li>
+        </ul>
+      </div>
 
-        <footer class="footer">
-        <p>&copy; 2025 Project PINOY. All Rights Reserved.</p>
-    </footer>
+      
+      <div class="about-box overlay-box">
+        <div class="box-overlay" style="background-image: url('vision.jfif');"></div>
+        <h1>Our Vision</h1>
+        <p>A Philippines where every citizen, office, and institution values honesty, fairness, and justice.</p>
+      </div>
 
+    </div>
+
+    
+    <div class="team-wide-box">
+
+      <h1>Our Team</h1>
+      <p>A group of students committed to making a positive change through advocacy, research, and community engagement.</p>
+
+      <div class="team-float-container">
+        <div class="team-member">
+          <img src="ani.jfif" alt="">
+          <span class="team-name">Anika Ava Aurelio</span>
+        </div>
+        <div class="team-member">
+          <img src="gem.jfif" alt="">
+          <span class="team-name">John Emmanuel Balbalosa</span>
+        </div>
+        <div class="team-member">
+          <img src="ian.jfif" alt="">
+          <span class="team-name">Ian Dave Catral</span>
+        </div>
+        <div class="team-member">
+          <img src="den.jfif" alt="">
+          <span class="team-name">Denise Charelle Hernandez</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    const teamBox = document.querySelector('.team-wide-box');
+    const teamMembers = document.querySelectorAll('.team-member img');
+    const teamNames = document.querySelectorAll('.team-name');
+    const overlayBoxes = document.querySelectorAll('.overlay-box');
+
+   
+    overlayBoxes.forEach(box => {
+      box.addEventListener('mouseenter', () => {
+        box.querySelector('.box-overlay').style.transform = 'scale(1.1)';
+      });
+      box.addEventListener('mouseleave', () => {
+        box.querySelector('.box-overlay').style.transform = 'scale(1)';
+      });
+    });
+
+   
+    teamBox.addEventListener('mouseenter', () => {
+      teamMembers.forEach(img => {
+        img.style.opacity = '1';
+        img.style.transform = 'scale(1.2)';
+      });
+      teamNames.forEach(name => name.style.opacity = '1');
+    });
+
+    teamBox.addEventListener('mouseleave', () => {
+      teamMembers.forEach(img => {
+        img.style.opacity = '0';
+        img.style.transform = 'scale(1)';
+      });
+      teamNames.forEach(name => name.style.opacity = '0');
+    });
+  </script>
+
+  <footer class="footer">
+    <p>&copy; 2025 Project PINOY. All Rights Reserved.</p>
+  </footer>
+
+</body>
 </html>
